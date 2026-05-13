@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cajj1pms87w8t"]
+
+[ext_resource type="Script" uid="uid://b74gc57c8pvjx" path="res://fighters/sly.gd" id="1_qfiyv"]
+[ext_resource type="PackedScene" uid="uid://biu1wyjynv2m3" path="res://fighter.tscn" id="2_0jc0a"]
+[ext_resource type="SpriteFrames" uid="uid://cwb1fofj518e1" path="res://fighters/sly_sprite.tres" id="3_8bjrb"]
+
+[node name="Sly" type="Node2D" unique_id=610784970]
+script = ExtResource("1_qfiyv")
+
+[node name="Fighter" parent="." unique_id=448622994 instance=ExtResource("2_0jc0a")]
+spriteframes = ExtResource("3_8bjrb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=445054558]

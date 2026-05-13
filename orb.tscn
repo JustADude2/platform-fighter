@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dxxo4xdlvjwjc"]
+
+[ext_resource type="Texture2D" uid="uid://calman3hmsy5y" path="res://assets/Orb-1.png" id="1_ogqpy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ogqpy"]
+
+[node name="Area2D" type="Area2D" unique_id=478746235 groups=["Orbs"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=402030494]
+shape = SubResource("CircleShape2D_ogqpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=547938579]
+texture = ExtResource("1_ogqpy")

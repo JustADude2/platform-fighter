@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://biu1wyjynv2m3"]
+
+[ext_resource type="Script" uid="uid://m1jdtjngbk8v" path="res://fighter.gd" id="1_umvcx"]
+[ext_resource type="Texture2D" uid="uid://dim4c07riawsr" path="res://assets/T-Pose-1.png" id="2_qq641"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jilj"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qq641"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_umvcx"]
+radius = 182.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umvcx"]
+atlas = ExtResource("2_qq641")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_efvb3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umvcx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Fighter" type="CharacterBody2D" unique_id=448622994 groups=["Player"]]
+script = ExtResource("1_umvcx")
+
+[node name="PushBox" type="CollisionShape2D" parent="." unique_id=585015]
+position = Vector2(-9.536743e-07, 9.536743e-07)
+shape = SubResource("RectangleShape2D_6jilj")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=464004619 groups=["HitBox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1162683041]
+shape = SubResource("RectangleShape2D_qq641")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1536151516 groups=["HurtBox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=304163663]
+shape = SubResource("CircleShape2D_umvcx")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1196766364]
+unique_name_in_owner = true
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_efvb3")
+animation = &"idle"
