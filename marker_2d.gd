@@ -14,7 +14,6 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.device != 0:
-		Input.warp_mouse(position)
 		self.get_child(0).show()
 	else:
 		i += 1

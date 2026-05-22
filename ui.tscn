@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://djf7keuxeyyoh"]
 
+[ext_resource type="Script" uid="uid://tm3tng57twac" path="res://ui.gd" id="1_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://c5c6f5fnlve7p" path="res://assets/sly_icon.png" id="2_27fn8"]
+
 [node name="UI" type="Control" unique_id=1069566379]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,49 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m6e0p")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=680574041]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = -143.0
+offset_right = 66.0
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+texture = ExtResource("2_27fn8")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1468838992]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -290.0
+offset_top = -144.0
+offset_right = -258.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(4, 4)
+texture = ExtResource("2_27fn8")
+
+[node name="Health1" type="Label" parent="." unique_id=1289618468]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 562.0
+offset_right = 221.0
+offset_bottom = 585.0
+
+[node name="Health2" type="Label" parent="." unique_id=1426685703]
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 566.0
+offset_right = 1054.0
+offset_bottom = 589.0
+text = "H."

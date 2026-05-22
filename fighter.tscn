@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://biu1wyjynv2m3"]
 
 [ext_resource type="Script" uid="uid://m1jdtjngbk8v" path="res://fighter.gd" id="1_umvcx"]
+[ext_resource type="Texture2D" uid="uid://rm62cwhvtvkj" path="res://assets/New Piskel (2).png" id="2_3ypa3"]
+[ext_resource type="Script" uid="uid://b32dksks8k2oo" path="res://hurt_box.gd" id="2_l3gly"]
 [ext_resource type="Texture2D" uid="uid://dim4c07riawsr" path="res://assets/T-Pose-1.png" id="2_qq641"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jilj"]
@@ -8,9 +10,6 @@ size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qq641"]
 size = Vector2(64, 64)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_umvcx"]
-radius = 182.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_umvcx"]
 atlas = ExtResource("2_qq641")
@@ -34,16 +33,22 @@ script = ExtResource("1_umvcx")
 position = Vector2(-9.536743e-07, 9.536743e-07)
 shape = SubResource("RectangleShape2D_6jilj")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=361267921]
+texture = ExtResource("2_3ypa3")
+offset = Vector2(0, -40)
+hframes = 2
+
 [node name="HitBox" type="Area2D" parent="." unique_id=464004619 groups=["HitBox"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1162683041]
+[node name="HitShape" type="CollisionShape2D" parent="HitBox" unique_id=1162683041]
+unique_name_in_owner = true
 shape = SubResource("RectangleShape2D_qq641")
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=1536151516 groups=["HurtBox"]]
+script = ExtResource("2_l3gly")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=304163663]
-shape = SubResource("CircleShape2D_umvcx")
-disabled = true
+[node name="HurtShape" type="CollisionShape2D" parent="HurtBox" unique_id=304163663]
+unique_name_in_owner = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1196766364]
 unique_name_in_owner = true

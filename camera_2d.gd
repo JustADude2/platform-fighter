@@ -11,5 +11,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x = (x1+x2)/2 
+	var dist = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2))
+	position.x = (x1+x2)/2
 	position.y = (y1+y2)/2
+	zoom.x = 600/(dist+60)
+	zoom.y = 600/(dist+60)

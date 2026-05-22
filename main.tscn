@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://djf7keuxeyyoh" path="res://ui.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://crev2inf1u6xe" path="res://main_menu.tscn" id="3_h2yge"]
-[ext_resource type="Script" uid="uid://drau8b3vn5ofc" path="res://marker_2d.gd" id="4_lquwl"]
-[ext_resource type="Texture2D" uid="uid://brpaqyritila2" path="res://assets/images.jpg" id="5_7mycd"]
 
 [node name="Main" type="Node2D" unique_id=1081566520]
 script = ExtResource("1_0xm2m")
@@ -21,11 +19,3 @@ unique_name_in_owner = true
 anchors_preset = -1
 grow_horizontal = 1
 grow_vertical = 1
-
-[node name="Marker2D" type="Marker2D" parent="." unique_id=2120979983]
-script = ExtResource("4_lquwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="Marker2D" unique_id=1112755562]
-position = Vector2(5, 8)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_7mycd")
